@@ -1,0 +1,66 @@
+======================================================================
+RISULTATI APPRENDIMENTO SUPERVISIONATO - DIAGNOSI DIABETE TIPO 2
+======================================================================
+
+CONFRONTO MODELLI - 5-Fold Stratified Cross-Validation
+------------------------------------------------------------------------------------------
+Decision Tree             accuracy=0.7135+/-0.0324 precision=0.5810+/-0.0483 recall=0.6679+/-0.0500 f1=0.6195+/-0.0353 roc_auc=0.7802+/-0.0328
+Random Forest             accuracy=0.7682+/-0.0326 precision=0.6594+/-0.0543 recall=0.7089+/-0.0189 f1=0.6820+/-0.0324 roc_auc=0.8384+/-0.0324
+MLP (Rete Neurale)        accuracy=0.7733+/-0.0332 precision=0.6873+/-0.0638 recall=0.6567+/-0.0378 f1=0.6699+/-0.0398 roc_auc=0.8318+/-0.0332
+
+
+STUDIO DI ABLAZIONE: CON vs SENZA FEATURE KB
+------------------------------------------------------------------------------------------
+Decision Tree             F1(con KB)=0.6195  F1(senza KB)=0.6105  Delta=+0.0090
+Random Forest             F1(con KB)=0.6820  F1(senza KB)=0.6840  Delta=-0.0019
+MLP (Rete Neurale)        F1(con KB)=0.6699  F1(senza KB)=0.6560  Delta=+0.0139
+
+
+MIGLIORI IPERPARAMETRI (GridSearchCV)
+----------------------------------------------------------------------
+
+Decision Tree:
+  Parametri: {'criterion': 'gini', 'max_depth': 15, 'min_samples_leaf': 8}
+  Miglior F1 CV: 0.6381
+
+Random Forest:
+  Parametri: {'max_depth': 8, 'min_samples_leaf': 2, 'n_estimators': 100}
+  Miglior F1 CV: 0.6674
+
+MLP (Rete Neurale):
+  Parametri: {'activation': 'tanh', 'alpha': 0.001, 'hidden_layer_sizes': (64, 32)}
+  Miglior F1 CV: 0.6683
+
+
+FEATURE RANKING (Mutual Information)
+----------------------------------------------------------------------
+   1. bmi_x_gluc                               0.1630
+   2. Glucose                                  0.1552
+   3. age_x_gluc                               0.1460
+   4. kb_screening_level                       0.1403
+   5. age_x_bmi                                0.1164
+   6. gluc_x_insulin                           0.1115
+   7. gluc_diabete                             0.1103
+   8. num_risk_factors                         0.1085
+   9. BMI                                      0.1035
+  10. gluc_normale                             0.0934
+  11. kb_num_diagnosi                          0.0873
+  12. kb_fattori_correlati                     0.0629
+  13. Insulin                                  0.0477
+  14. Age                                      0.0426
+  15. age_rischio                              0.0383
+  16. bmi_obeso_ii                             0.0371
+  17. age_giovane                              0.0330
+  18. Pregnancies                              0.0289
+  19. BloodPressure                            0.0270
+  20. age_medio                                0.0253
+  21. DiabetesPedigreeFunction                 0.0174
+  22. bmi_normale                              0.0146
+  23. age_anziano                              0.0122
+  24. kb_profilo_tipico                        0.0082
+  25. SkinThickness                            0.0074
+  26. patient_id                               0.0030
+  27. insulina_alta                            0.0027
+  28. bmi_sovrappeso                           0.0027
+  29. bp_alta                                  0.0010
+  30. bmi_obeso_i                              0.0000
