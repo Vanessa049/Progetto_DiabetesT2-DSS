@@ -1,0 +1,23 @@
+# Requirements - Sistema di Supporto Decisionale per il Diabete di Tipo 2
+# Ingegneria della Conoscenza - UNIBA 25/26
+
+# --- Machine Learning ---
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# --- Visualizzazione ---
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# --- Knowledge Base / Prolog ---
+# Richiede SWI-Prolog installato sul sistema:
+#   Ubuntu/Debian: sudo apt install swi-prolog
+#   Arch/Manjaro:  sudo pacman -S swi-prolog
+pyswip>=0.2.11
+
+# --- CSP ---
+python-constraint>=1.4.0
+
+# --- Persistenza modelli ---
+joblib>=1.3.0
