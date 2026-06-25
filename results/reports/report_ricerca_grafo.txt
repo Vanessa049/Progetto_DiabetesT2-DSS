@@ -1,0 +1,21 @@
+RICERCA SU GRAFO METABOLICO: BFS vs A*
+============================================================
+Grafo: 200 nodi, soglia similarita'=0.12
+Sorgente: Paziente 28 (Eta=22, Sano)
+Obiettivo: paziente diabetico con glucose>=130 e BMI>=30
+
+BFS:
+  Percorso (3 nodi, 88 espansi):
+    1. Paziente 28 (Eta=22, Gluc=97, BMI=23.2, Sano)
+    2. Paziente 86 (Eta=27, Gluc=110, BMI=32.4, Sano)
+    3. Paziente 165 (Eta=32, Gluc=131, BMI=31.6, Diabete)
+
+A*:
+  Percorso (3 nodi, 6 espansi):
+    1. Paziente 28 (Eta=22, Gluc=97, BMI=23.2, Sano)
+    2. Paziente 86 (Eta=27, Gluc=110, BMI=32.4, Sano)
+    3. Paziente 172 (Eta=29, Gluc=134, BMI=35.4, Diabete)
+
+Confronto:
+  Nodi espansi: BFS=88, A*=6
+  Tempo (s): BFS=0.0001, A*=0.0002

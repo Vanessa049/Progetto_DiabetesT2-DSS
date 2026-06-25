@@ -1,0 +1,14 @@
+CSP - PIANI DI INTERVENTO DIABETE TIPO 2
+============================================================
+
+Tempo risoluzione: 0.002s
+Soluzioni trovate: 50
+
+MIGLIOR SOLUZIONE (score=0.6017):
+------------------------------------------------------------
+  Paziente 307 (Eta=47, BMI=25.5): Supporto Psicologico (CBT per aderenza)
+  Paziente 302 (Eta=25, BMI=31.6): GLP-1 Agonisti (Semaglutide)
+  Paziente 340 (Eta=41, BMI=39.9): Intervento Intensivo sul Peso (VLCD)
+  Paziente 416 (Eta=22, BMI=35.7): Attivita' Fisica Aerobica (150 min/sett)
+  Paziente 44 (Eta=54, BMI=45.4): Programma DSMES (Educazione Autogestione)
+  Paziente 615 (Eta=50, BMI=36.1): Dieta a Basso Indice Glicemico
